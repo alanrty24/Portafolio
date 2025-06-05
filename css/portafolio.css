@@ -1,0 +1,228 @@
+* {
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 20px;
+    font-family: "Roboto",sans-serif;
+    /* Variables */
+    --Font1:#023e8a;
+    --Font2:#0077b6;
+    --color-title:#ade8f4;
+    --padding-Font: 1rem 5rem 4rem;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 70% 1fr;
+}
+
+/* ********************* HEADER *********************** */
+.header{
+    width: 100%;
+    background-color: var(--Font1);
+    padding: var(--padding-Font);
+    display: grid;
+    grid-template-rows: 10% 1fr;
+    grid-template-columns: 100%;
+}
+
+/* ********************* HEADER NAVBAR *********************** */
+.header .navbar{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ********************* HEADER NAVBAR TITLE *********************** */
+.header .navbar .title{
+   font-size: .9rem;
+   color: var(--color-title);
+   font-weight: 500;
+   text-decoration: none;
+}
+
+/* ********************* HEADER NAVBAR LIST *********************** */
+.header .navbar .list{
+    width: 100%;
+    margin: 0rem;
+    padding: 0rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1rem;
+    color: white;
+    font-size: .55rem;
+}
+
+/* Item */
+.header .navbar .list .item{
+    &:hover{
+        cursor: pointer;
+        color: #48cae4;
+    }
+}
+
+/* ********************* HEADER DESCRIPTION *********************** */
+.header .description{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    grid-template-rows: 100%;
+}
+
+/* ********************* HEADER DESCRIPTION PRESENTACION *********************** */
+.header .description .presentacion{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 80% 1fr;
+    grid-template-columns: 100%;
+}
+
+/* ********************* HEADER DESCRIPTION PRESENTACION INF *********************** */
+.header .description .presentacion .inf{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+    font-size: .6rem;
+    color: white;
+    padding-top: .2rem;
+}
+
+/* /////////// Saludo ///////////// */
+/* Saludo */
+.header .description .presentacion .inf .saludo{
+    margin: 0rem;
+    color: white;
+    font-size: 1.8rem;
+}
+
+/* trabajo el span */
+.header .description .presentacion .inf .saludo .name{
+    color: var(--color-title);
+}
+
+/* /////////// descripción ///////////// */
+.header .description .presentacion .inf .description{
+    margin: 0rem;
+}
+
+/* /////////// info ///////////// */
+.header .description .presentacion .inf .info{
+    width: 70%;
+    margin: 0rem;
+    text-align: justify;
+    font-weight: 200;
+}
+
+/* ********************* HEADER DESCRIPTION PRESENTACION CONTACTO *********************** */
+.header .description .presentacion .contacto{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* /////////// lista de iconos ///////////// */
+.header .description .presentacion .contacto .list{
+    margin: 0rem;
+    padding: 0rem;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    font-size: 1.4rem;
+}
+
+/* item en comun */
+.header .description .presentacion .contacto .list .item a{
+    color: black;
+}
+
+/* /////////// 1 item de la lista ///////////// */
+.header .description .presentacion .contacto .list .item:first-child a{
+    &:hover{
+        cursor: pointer;
+        color: red;
+    }
+}
+
+/* /////////// 2 item de la lista ///////////// */
+.header .description .presentacion .contacto .list .item:nth-child(2) a{
+    &:hover{
+        cursor: pointer;
+        color: white;
+    }
+}
+/* /////////// 3 item de la lista ///////////// */
+.header .description .presentacion .contacto .list .item:nth-child(3) a{
+    &:hover{
+        cursor: pointer;
+        color: blue;
+    }
+}
+
+/* /////////// 3 item de la lista ///////////// */
+.header .description .presentacion .contacto .list .item:nth-child(4) a{
+    &:hover{
+        cursor: pointer;
+        color: white;
+    }
+}
+
+/* /////////// 5 item de la lista ///////////// */
+.header .description .presentacion .contacto .list .item:last-child a{
+    &:hover{
+        cursor: pointer;
+        color: #0f0;
+    }
+}
+
+/* ********************* HEADER CONTIMG *********************** */
+.header .description .contimg{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+    position: relative;
+}
+
+/* /////////// Imagen ///////////// */
+.header .description .contimg .img{
+    width: 100%;
+    padding: 1rem;
+    z-index: 1;
+    position: relative;
+    left: calc(50%);
+    top: -.5rem;
+    border-radius: 5rem;
+}
+
+/* /////////// Contenedor ///////////// */
+.header .description .contimg .contenedor{
+    width: 40%;
+    height: 85%;
+    padding: 1rem;
+    background: var(--color-title);
+    position: absolute;
+    /* right: 10rem; */
+    /* left: 35%; */
+    left: 40%;
+    top: .5rem;
+    border: solid .2rem grey;
+    border-radius: 5rem;
+}
+
+/* ********************* MAIN *********************** */
+.main{
+    width: 100%;
+    background-color: var(--Font2);
+    padding: var(--padding-Font);
+}
