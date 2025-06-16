@@ -278,9 +278,7 @@ body {
   animation: rotate 2s linear infinite;
 }
 
-.header .description .contimg .contcolor::before {
-  /* opacity: 25%; */
-}
+
 /* ?: Animación */
 /* ? Animación 1 rotar */
 @keyframes rotate {
