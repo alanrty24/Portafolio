@@ -31,7 +31,7 @@ body {
   width: 100%;
   grid-area: navbar;
   height: 10vh;
-  background: var(--Font1);
+  background-color: var(--Font1);
   overflow: hidden;
   display: flex;
   justify-content: space-between;
@@ -45,7 +45,7 @@ body {
 
 /* ********************* HEADER NAVBAR TITLE *********************** */
 .navbar .title {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   color: var(--color-title);
   font-weight: 500;
   text-decoration: none;
@@ -62,7 +62,7 @@ body {
   justify-content: end;
   gap: 1rem;
   color: white;
-  font-size: 0.55rem;
+  font-size: 0.6rem;
 }
 
 /* Item */
@@ -79,15 +79,15 @@ body {
   grid-area: head;
   background: var(--Font1);
   border-bottom: solid 0.1rem white;
-  display: grid;
+  display: flex;
   padding-inline: 5rem;
 }
 
-.header .description{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 60% 1fr;
-    grid-template-rows: 100%;
+.header .description {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 60% 1fr;
+  grid-template-rows: 100%;
 }
 
 /* ********************* HEADER DESCRIPTION PRESENTACION *********************** */
@@ -115,7 +115,7 @@ body {
 .header .description .presentacion .inf .saludo {
   margin: 0rem;
   color: white;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 /* trabajo el span */
@@ -125,7 +125,9 @@ body {
 
 /* /////////// descripción ///////////// */
 .header .description .presentacion .inf .description {
+  display: block;
   margin: 0rem;
+  font-size: 1rem;
 }
 
 /* /////////// info ///////////// */
@@ -134,6 +136,7 @@ body {
   margin: 0rem;
   text-align: justify;
   font-weight: 200;
+  font-size: 0.8rem;
 }
 
 /* ********************* HEADER DESCRIPTION PRESENTACION CONTACTO *********************** */
@@ -151,7 +154,7 @@ body {
   list-style: none;
   display: flex;
   gap: 2rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 /* * item en comun */
@@ -203,54 +206,33 @@ body {
 .header .description .contimg {
   width: 100%;
   height: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
-  grid-template-rows: 1fr;
-  align-items: baseline;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  padding: 1rem;
-  /* position: relative; */
-}
-
-/* * Imagen y Contenedor */
-.header .description .contimg .move{
-    width: 10rem;
-    height: 15rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    left: 50%;
-    border-radius: .5rem;
-    overflow: hidden;
-    z-index: 1;
+  overflow: hidden;
+  position: relative;
 }
 
 /* * Imagen */
-.header .description .contimg .move .img{
-    width: 10rem;
-    height: 15rem;
+.header .description .contimg .img {
+  height: 70%;
+  width: 40%;
+  border-radius: 5%;
+  position: absolute;
+  top: 1rem;
+  z-index: 1;
+  /* height: 50%; */
 }
 
-/* * Contenedor del color */
-.header .description .contimg .contenedor{
-    width: 10rem;
-    height: 15rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    right: 35%;
-    top: 10%;
-    border-radius: .5rem;
-    overflow: hidden;
-}
-
-/* * Color */
-.header .description .contimg .contenedor .contcolor{
-    width: 10rem;
-    height: 15rem;
-    background-color: var(--color-title);
+.header .description .contimg .contcolor {
+  height: 70%;
+  width: 40%;
+  border-radius: 5%;
+  background-color: var(--color-title);
+  position: absolute;
+  top: 15%;
+  left: 40%;
+  /* height: 50%; */
 }
 
 /* TODO: SERVICIOS */
@@ -273,4 +255,50 @@ body {
   grid-area: testimonio;
   background: var(--Font2);
   border-bottom: solid 0.1rem white;
+}
+
+/* ? MEDIA QUERY */
+
+/* ? 800 A 1024 */
+@media screen and (min-width: 800px) and (max-width: 1025px) {
+  body {
+    grid-template-rows: 15vh 50vh 50vh 80vh 50vh;
+  }
+
+  /* TODO: NAVBAR */
+  .navbar {
+    height: 15vh;
+    padding-inline: 3rem;
+  }
+
+  /* TODO: HEADER */
+
+  .header {
+    padding-inline: 3rem;
+  }
+
+  /* /////////// info ///////////// */
+  .header .description .presentacion .inf .info {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+
+  /* ********************* HEADER DESCRIPTION PRESENTACION CONTACTO *********************** */
+  .header .description .presentacion .contacto {
+    width: 100%;
+  }
+
+  /* * lista de iconos */
+  .header .description .presentacion .contacto .list {
+    font-size: 1.4rem;
+  }
+
+  /* * Imagen */
+  .header .description .contimg .img {
+    width: 50%;
+  }
+
+  .header .description .contimg .contcolor {
+    width: 50%;
+  }
 }
