@@ -132,7 +132,7 @@ body {
 
 /* /////////// info ///////////// */
 .header .description .presentacion .inf .info {
-  width: 70%;
+  width: 80%;
   margin: 0rem;
   text-align: justify;
   font-weight: 200;
@@ -164,41 +164,61 @@ body {
 
 /* * 1 item de la lista */
 .header .description .presentacion .contacto .list .item:first-child a {
+  transition: all .6s linear;
+
   &:hover {
     cursor: pointer;
     color: red;
+    transition: all .6s linear;
+    font-size: 2rem;
   }
 }
 
 /* * 2 item de la lista */
 .header .description .presentacion .contacto .list .item:nth-child(2) a {
+  transition: all .6s linear;
+
   &:hover {
     cursor: pointer;
     color: white;
+    transition: all .6s linear;
+    font-size: 2rem;
   }
 }
 
 /* * 3 item de la lista */
 .header .description .presentacion .contacto .list .item:nth-child(3) a {
+  transition: all .6s linear;
+
   &:hover {
     cursor: pointer;
     color: blue;
+    transition: all .6s linear;
+    font-size: 2rem;
   }
 }
 
 /* * 4 item de la lista */
 .header .description .presentacion .contacto .list .item:nth-child(4) a {
+  transition: all .6s linear;
+
   &:hover {
     cursor: pointer;
     color: white;
+    transition: all .6s linear;
+    font-size: 2rem;
   }
 }
 
 /* * 5 item de la lista */
 .header .description .presentacion .contacto .list .item:last-child a {
+  transition: all .6s linear;
+
   &:hover {
     cursor: pointer;
     color: #0f0;
+    transition: all .6s linear;
+    font-size: 2rem;
   }
 }
 
@@ -219,7 +239,7 @@ body {
   width: 40%;
   border-radius: 5%;
   position: absolute;
-  top: 1rem;
+  top: 5%;
   z-index: 1;
   /* height: 50%; */
 }
@@ -259,8 +279,15 @@ body {
 
 /* ? MEDIA QUERY */
 
-/* ? 800 A 1024 */
-@media screen and (min-width: 800px) and (max-width: 1025px) {
+/* Estilos para móviles */
+@media (max-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+/* Estilos para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
   body {
     grid-template-rows: 15vh 50vh 50vh 80vh 50vh;
   }
@@ -290,15 +317,26 @@ body {
 
   /* * lista de iconos */
   .header .description .presentacion .contacto .list {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 
   /* * Imagen */
   .header .description .contimg .img {
-    width: 50%;
+    height: 80%;
+    width: 55%;
+    top: 0;
   }
 
   .header .description .contimg .contcolor {
-    width: 50%;
+    height: 80%;
+    width: 55%;
+    top: 10%;
+  }
+}
+
+/* Estilos para computadoras de escritorio */
+@media (min-width: 1025px) {
+  body {
+    background-color: lightcoral;
   }
 }
